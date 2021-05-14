@@ -17,6 +17,7 @@ class Mascota(models.Model):
     ]
     nombre = models.CharField(max_length=200, null=False)
     tipo_mascota = models.IntegerField(choices=TIPO_MASCOTA_CHOICES, default=PERRO)
+    edad = models.IntegerField()
 
     # Foreign Keys
     persona = models.ForeignKey(
